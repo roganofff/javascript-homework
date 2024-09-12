@@ -135,3 +135,35 @@ function datesDifference(one, other) {
 let someDay = new Date('August 19, 1975 23:15:30');
 
 console.log(datesDifference(now, someDay));
+
+// Создайте функцию reverspusheString, которая принимает строку и возвращает ее в перевернутом виде.
+
+function reverseString(str) {
+    let reversedStr = '';
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversedStr += str[i];
+    }
+
+    return reversedStr;
+}
+
+console.log(reverseString('abcd'));
+
+// Напишите функцию, которая принимает строку и возвращает ее, удалив все гласные буквы.
+
+function screwVowels(str) {
+    let noVowelsStr = '';
+
+    for (let i = 0; i < str.length; i++) {
+        if (!'aeiuoAEUIO'.includes(str[i])) {
+            noVowelsStr += str[i];
+        }
+    }
+
+    return noVowelsStr;
+}
+
+console.log(screwVowels('yolooo'));
+console.log(screwVowels('oooO'));
+console.log(screwVowels('ywy0t'));
