@@ -1,17 +1,21 @@
-// 1
 
-function findLongestWord(str) {
+function findLongestWord(input) {
     let maxLen = 0;
-    let words = str.split(" ");
+    let maxWord = '';
+    let words = input.split(" ");
+    console.log(words);
 
-    for (const word in words) {
-        if (maxLen < word.length) {
-            maxLen = word.length
+    for (let i = 0; i < words.length; i++) {
+        if (maxLen < words[i].length) {
+            maxLen = words[i].length;
+            maxWord = words[i];
         }
     }
 
-    return maxLen;
+    return maxWord;
 }
+
+console.log(findLongestWord("Скушай ещё этих французских булок да выпей чаю."))
 
 function isSorted(arr) {
     for (let i = 0; i < arr.length - 1; i++) {
@@ -22,3 +26,7 @@ function isSorted(arr) {
 
     return true;
 }
+
+console.log(isSorted([1, 2, 3, 4, 5]))
+console.log(isSorted([1, 2, 1, 4]))
+console.log(isSorted([1, 2, 2, 4]))
